@@ -27,7 +27,7 @@ public class Main {
         carService.filterByYear(2019).forEach(car -> System.out.println(car.getBrand() + car.getModel()));
 
 
-        //carService.filterByTypeAndFuel(carService, Sedan, TypeFuel.ELECTRIC );
+        carService.filterByTypeAndFuel(Sedan, TypeFuel.ELECTRIC).forEach(car -> System.out.println(car.getBrand() + car.getModel()));
 
         //exportReportPrinter.printReport(sport);
 

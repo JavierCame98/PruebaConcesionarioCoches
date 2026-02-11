@@ -34,12 +34,13 @@ public class CarService {
                 .toList();
     }
 
-    public <T extends Car> List<T> filterByTypeAndFuel(List<Car> cars, Class<T> type, TypeFuel fuel) {
+
+
+    public List<Car> filterByTypeAndFuel(Car car, TypeFuel fuel){
         return cars.stream()
-                .filter(type::isInstance)
-                .map(type::cast)
-                .filter(car -> car.getTypeFuel() == fuel)
+                .filter(cars -> cars instanceof Car type && type.getTypeFuel() == fuel)
                 .toList();
     }
+
 
 }

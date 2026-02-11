@@ -30,9 +30,9 @@ public class CarService {
 
 
 
-    public List<Car> filterByTypeAndFuel(Car car, TypeFuel fuel) {
+    public List<Car> filterByTypeAndFuel(Class< ? extends Car> typeCar, TypeFuel fuel) {
         return cars.stream()
-                .filter(cars -> cars instanceof Car type && type.getTypeFuel() == fuel)
+                .filter(cars ->  typeCar.isInstance(cars) && cars.getTypeFuel() == fuel)
                 .toList();
     }
 

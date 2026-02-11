@@ -29,7 +29,7 @@ public class Main {
 
         //carService.filterByTypeAndFuel(carService, Sedan, TypeFuel.ELECTRIC );
 
-        exportReportPrinter.printReport(sport);
+        //exportReportPrinter.printReport(sport);
 
 
 
